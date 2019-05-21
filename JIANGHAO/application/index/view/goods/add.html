@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+  <form action="{:url('store')}" method="post">
+      <input type="text" name="goodsname" placeholder="商品名称">
+      <input type="text" name="price" placeholder="商品价格">
+
+
+
+         <select name="class_id">
+
+             {foreach $data as $item}
+             <option value="{$item.id}" >{$item.namee}</option>
+             {/foreach}
+         </select>
+
+
+
+      <input type="submit" value="提交">
+  </form>
+</body>
+</html>
